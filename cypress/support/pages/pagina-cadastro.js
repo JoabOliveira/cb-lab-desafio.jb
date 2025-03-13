@@ -8,17 +8,22 @@ class Cadastro {
         cy.get('[text-left=""] > .link').click();
     }
     preencherFormulario(){
-        cy.get(el.nome).type('Joca Oliveira');
-        cy.get(el.email).type('joacbs@gmail.com');
+        cy.get(el.nome).type('Joca Borges');
+        cy.get(el.email).type('joca.borges@gmail.com');
         cy.get(el.inputPassword).type('Senha@123');
         cy.get(el.confirmPassword).type('Senha@123');
         cy.get(el.selecineSeuEstado).click();
-        cy.get(el.estado).click();
-        cy.get(el.desejaReceberNotificacao).check();
-        cy.get(el.termosCondicoesUso).check();
+        cy.get(el.popUp).should('be.visible');
+        cy.get(el.estado).contains('Alagoas').click();
+        cy.get(el.desejaReceberNotificacao).click();
+        cy.get(el.termosCondicoesUso).click();
+        cy.get(el.submitButtonAceitar).click();
+        cy.get(el.submitButtonCadastrar).click();
     }
-    submeterCadastro(){
-        cy.get(el.submitButton).click();
+    codigoAutenticacao(){
+        cy.get(el.submitButtonFechar).click();
+        cy.get(el.codigo).type(AAAAAA);
+        cy.get(el.submitButtonAcessar).click();
     }
 }
 

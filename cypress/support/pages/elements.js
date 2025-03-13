@@ -4,9 +4,14 @@ export const ELEMENTS = {
     inputPassword: '[id = "ion-input-6"]',
     confirmPassword: '[id = "ion-input-7"]',
     selecineSeuEstado: '[formcontrolname="regionId"]',
-    estado: '[]',
-    desejaReceberNotificacao: '[.checkbox.ion-valid > .ng-untouched]',
-    termosCondicoesUso: '[.checkbox.ion-invalid > .ng-untouched]',
-    submitButton: '[.button-container > .disabled]'
-   
+    popUp: '[class="action-sheet-container sc-ion-action-sheet-ios"]',
+    estado: '[class="action-sheet-group sc-ion-action-sheet-ios"]',
+    desejaReceberNotificacao: '[formcontrolname="customNotification"]',
+    termosCondicoesUso: '[formcontrolname="termsAndConditions"]',
+    submitButtonAceitar: '[class="is-primary"]',
+    submitButtonCadastrar: '[class="button-container"]',
+    submitButtonFechar: '[class="is-primary"]',
+    codigo: '[id="c_6guep9vk9dm86q28l1"]',
+    submitButtonAcessar: '[class="ng-tns-c566118524-0"]'
+
 }
